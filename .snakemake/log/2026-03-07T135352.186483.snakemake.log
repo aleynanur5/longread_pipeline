@@ -1,0 +1,2 @@
+SyntaxError in file /home/lenova/longread_pipeline/Snakefile, line 11:
+Command must be given as string after the shell keyword. (Snakefile, line 11)
