@@ -1,0 +1,9 @@
+# Snakemake internal files
+.snakemake/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Conda environment (opsiyonel, environment.yml yeterli)
+env/
