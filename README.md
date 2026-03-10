@@ -3,11 +3,12 @@ A reproducible mini bioinformatics pipeline for analyzing long-read sequencing d
 
 ## Pipeline Overview
 This pipeline performs basic analysis of long-read sequencing data and generates quality metrics and visualizations to help researchers evaluate sequencing results before downstream analysis.
+
 ### Main steps of the pipeline:
-1.	Read input FASTQ sequencing data (run_fastqc) → Perform quality control using FastQC (HTML + ZIP)
-2.	Analyze read statistics (analyze_reads) → Compute read statistics (CSV)   
-3.	Generate plots for read length distribution and quality metrics (plot_results) → Visualize statistics (PNG graphs)
-4.	Save results in an organized output directory → Store all outputs in results/ folder (HTML, ZIP, CSV and PNG outputs)
+1. Read input FASTQ sequencing data
+2. Analyze read statistics (analyze_reads) → Compute read statistics (CSV)
+3. Generate plots and QC reports using NanoPlot → Visualize statistics (HTML + TXT outputs)
+4. Save results in an organized output directory → Store all outputs in results/ folder (HTML, ZIP, CSV and PNG outputs)
 
 ### Pipeline Workflow
 ```
@@ -15,9 +16,9 @@ Raw Sequencing Data (FASTQ)
 ↓
 Read Analysis (analyze_reads.py)
 ↓
-Quality Metrics & Statistics    
+Quality Metrics & Statistics (FastQC + NanoPlot)   
 ↓
-Plot Generation (plot_reads.py)
+Plot Generation (plot_reads.py or NanoPlot)
 ↓
 Results Folder
 ```
