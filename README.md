@@ -7,7 +7,7 @@ This pipeline performs basic analysis of long-read sequencing data and generates
 1.	Read input FASTQ sequencing data (run_fastqc) → Perform quality control using FastQC (HTML + ZIP)
 2.	Analyze read statistics (analyze_reads) → Compute read statistics (CSV)   
 3.	Generate plots for read length distribution and quality metrics (plot_results) → Visualize statistics (PNG graphs)
-4.	Save results in an organized output directory → Store all outputs in results/ folder (CSV and PNG outputs)
+4.	Save results in an organized output directory → Store all outputs in results/ folder (HTML, ZIP, CSV and PNG outputs)
 
 ### Pipeline Workflow
 ```
@@ -19,7 +19,7 @@ Quality Metrics & Statistics
 ↓
 Plot Generation (plot_reads.py)
 ↓
-Results Folder (CSV and PNG outputs)
+Results Folder
 ```
 
 This workflow analyzes long-read sequencing data and generates statistics and visualizations to help evaluate sequencing quality before further downstream analysis.
