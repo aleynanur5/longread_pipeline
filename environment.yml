@@ -9,8 +9,12 @@ dependencies:
   - python=3.10
   - snakemake-minimal
   - fastqc
+  - nanoplot
   - biopython
   - pandas
   - matplotlib
   - seaborn
-
+  - pip
+  - pip:
+      - plotly
+      - kaleido
