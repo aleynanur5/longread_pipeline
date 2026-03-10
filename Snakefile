@@ -2,10 +2,9 @@ rule all:
     input:
         "results/barcode77_fastqc.html",
         "results/barcode77_fastqc.zip",        
-        "results/barcode77_stats.csv",
-        "results/gc_distribution.png",
-        "results/read_length_distribution.png",
-        "results/mean_quality_distribution.png"
+        "results/NanoPlot-report.html",        
+        "results/NanoStats.txt",       
+        "results/barcode77_stats.csv"
 
 rule run_fastqc:
     input:
@@ -16,6 +15,15 @@ rule run_fastqc:
     shell:
         "export _JAVA_OPTIONS='-Xmx4G' && fastqc {input} -o results"
 
+rule nanoplot:
+    input:
+        "data/barcode77.fastq"
+    output:
+          html="results/NanoPlot-report.html",
+          stats="results/NanoStats.txt"
+    shell:
+          "NanoPlot -t 1 --fastq {input} -o results --plots kde dot"
+       
 rule analyze_reads:
     input:
         "data/barcode77.fastq"
@@ -24,12 +32,3 @@ rule analyze_reads:
     shell:
         "python analyze_reads.py {input} {output}"
 
-rule plot_results:
-    input:
-        "results/barcode77_stats.csv"
-    output:
-        "results/gc_distribution.png",
-        "results/read_length_distribution.png",
-        "results/mean_quality_distribution.png"
-    shell:
-        "python plot_reads.py"
