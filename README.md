@@ -1,31 +1,30 @@
 # Long Read Bioinformatics Pipeline
 A reproducible mini bioinformatics pipeline for analyzing long-read sequencing data using Snakemake and Python.
 
-# Pipeline Overview
+## Pipeline Overview
 This pipeline performs basic analysis of long-read sequencing data and generates quality metrics and visualizations to help researchers evaluate sequencing results before downstream analysis.
-Main steps of the pipeline:
-1.	Read input FASTQ sequencing data
-2.	Analyze read statistics
-3.	Generate plots for read length distribution and quality metrics
-4.	Save results in an organized output directory
+### Main steps of the pipeline:
+1.	Read input FASTQ sequencing data (run_fastqc) → Perform quality control using FastQC (HTML + ZIP)
+2.	Analyze read statistics (analyze_reads) → Compute read statistics (CSV)   
+3.	Generate plots for read length distribution and quality metrics (plot_results) → Visualize statistics (PNG graphs)
+4.	Save results in an organized output directory → Store all outputs in results/ folder (CSV and PNG outputs)
 
+### Pipeline Workflow
 ```
-## Pipeline Workflow
-
 Raw Sequencing Data (FASTQ)
 ↓
 Read Analysis (analyze_reads.py)
 ↓
-Quality Metrics & Statistics
+Quality Metrics & Statistics    
 ↓
 Plot Generation (plot_reads.py)
 ↓
-Results Folder
+Results Folder (CSV and PNG outputs)
 ```
 
 This workflow analyzes long-read sequencing data and generates statistics and visualizations to help evaluate sequencing quality before further downstream analysis.
 
-# Repository Structure
+## Repository Structure
 ```
 longread_pipeline/
 │
@@ -39,7 +38,7 @@ longread_pipeline/
 └── README.md            - Project documentation
 ```
 
-# Requirements
+## Requirements
 Make sure the following tools are installed:
 -	Git
 -	Git LFS
@@ -47,7 +46,7 @@ Make sure the following tools are installed:
 -	Snakemake
 -	Python 3.x
 
-# Installation
+## Installation
 1. Clone the repository
 git clone https://github.com/aleynanur5/longread_pipeline.git
 cd longread_pipeline
@@ -57,39 +56,39 @@ conda activate longread_env
 3. Initialize Git LFS (for large files)
 git lfs install
 
-# Running the Pipeline
+## Running the Pipeline
 Execute the workflow using Snakemake:
 snakemake --cores 1
 
-# Example Run
+## Example Run
 Run the pipeline with:
 snakemake --cores 1
 This will execute the full workflow defined in the Snakefile and generate results in the results/ directory.
 
-# Input Data
+## Input Data
 The pipeline expects long-read sequencing data in FASTQ format.
 Example input location:
 data/barcode77.fastq
 Large sequencing files are tracked using Git LFS.
 
-# Output
+## Output
 After running the pipeline, the results will be stored in the results/ directory.
 Outputs include:
 - Read statistics
 - Quality metrics
 -	Visualization plots
 
-# Reproducibility
+## Reproducibility
 The pipeline uses:
 - Snakemake for workflow management
 - Conda environment for dependency management
-- Git LFS for handling large sequencing files7
+- Git LFS for handling large sequencing files
 
 This project uses a Conda environment defined by an environment.yml file to provide reproducible analysis.
 To recreate the environment:
 - conda env create -f environment.yml
 - conda activate longread_env
 
-# Author
+## Author
 Aleynanur DOĞAN ATALAY
 Bioinformatics Internship Project
