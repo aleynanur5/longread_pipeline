@@ -56,35 +56,31 @@ Make sure the following tools are installed:
 
 ## Installation
 1. Clone the repository
-git clone https://github.com/aleynanur5/longread_pipeline.git
-cd longread_pipeline
+   git clone https://github.com/aleynanur5/longread_pipeline.git
+   ```cd longread_pipeline```
 2. Install the Conda environment
-conda env create -f environment.yml
-conda activate longread_env
+   ```conda env create -f environment.yml```
+   ```conda activate longread_env```
 3. Initialize Git LFS (for large files)
-git lfs install
+    ```git lfs install```
 
 ## Running the Pipeline
 Execute the workflow using Snakemake:
-snakemake --cores 1
-
-## Example Run
-Run the pipeline with:
-snakemake --cores 1
+```snakemake --cores 1```
 This will execute the full workflow defined in the Snakefile and generate results in the results/ directory.
 
 ## Input Data
 The pipeline expects long-read sequencing data in FASTQ format.
 Example input location:
-data/barcode77.fastq
+data/example.fastq
 Large sequencing files are tracked using Git LFS.
 
 ## Output
 After running the pipeline, the results will be stored in the results/ directory.
 Outputs include:
 - Read statistics (`.csv`)
-- Quality metrics (`.html` veya `.txt`) 
--	Visualization plots (`.png` veya `.pdf`)
+- Quality metrics (`.html` or `.txt`)
+- Visualization plots (`.png` or `.pdf`)
 
 ## Reproducibility
 The pipeline uses:
