@@ -30,6 +30,8 @@ longread_pipeline/
 ├── README.md                         # Project documentation
 ├── Snakefile                         # Snakemake workflow definition
 ├── analyze_reads.py                  # Script for analyzing sequencing reads
+├── visualize_reads.py
+├── calculate_metrics.py                 
 ├── data/
 │   ├── example.zip                   # Example data (if needed)
 │   └── example.fastq                 # Example FASTQ file
@@ -38,6 +40,8 @@ longread_pipeline/
     ├── NanoPlot-report.html          # NanoPlot quality report
     ├── NanoStats.txt                 # NanoPlot statistics
     ├── example_stats.csv             # Read statistics
+    ├── Metrics
+    ├──  Visualization      
     └── NanoPlot_details/             # All detailed plots
         ├── LengthvsQualityScatterPlot_dot.html
         ├── LengthvsQualityScatterPlot_kde.html
