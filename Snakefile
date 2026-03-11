@@ -1,8 +1,17 @@
 rule all:
     input:
-        "results/NanoPlot-report.html",        
-        "results/NanoStats.txt",       
-        "results/barcode77_stats.csv"
+        "results/NanoPlot-report.html",
+        "results/NanoStats.txt",
+        "results/Metrics/read_metrics.csv",
+        "results/Visualization/Length_Histogram.png",
+        "results/Visualization/Length_KDE.png",
+        "results/Visualization/Length_DotPlot.png",
+        "results/Visualization/Mean_Quality_Histogram.png",
+        "results/Visualization/Mean_Quality_KDE.png",
+        "results/Visualization/Mean_Quality_DotPlot.png",
+        "results/Visualization/GCp_Histogram.png",
+        "results/Visualization/GCp_KDE.png",
+        "results/Visualization/GCp_DotPlot.png"
 
 rule nanoplot:
     input:
@@ -17,13 +26,20 @@ rule nanoplot:
         NanoPlot -t 1 --fastq {input} -o {output.detail_dir} --plots kde dot
         mv {output.detail_dir}/NanoPlot-report.html {output.html}
         mv {output.detail_dir}/NanoStats.txt {output.stats}
-        
         """
-rule analyze_reads:
+
+rule calculate_metrics:
     input:
         "data/barcode77.fastq"
     output:
-        "results/barcode77_stats.csv"
+        "results/Metrics/read_metrics.csv"
     shell:
-        "python analyze_reads.py {input} {output}"
+        "python calculate_metrics.py {input}"
 
+rule visualize_metrics:
+    input:
+        "results/Metrics/read_metrics.csv"
+    output:
+        expand("results/Visualization/{metric}_{plot}.png", metric=["Length","Mean_Quality","GCp"], plot=["Histogram","KDE","DotPlot"])
+    shell:
+        "python visualize_reads.py {input}"
