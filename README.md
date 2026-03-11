@@ -8,7 +8,7 @@ This pipeline performs basic analysis of long-read sequencing data and generates
 1. Read input FASTQ sequencing data
 2. Analyze read statistics (analyze_reads) → Compute read statistics (CSV)
 3. Generate plots and QC reports using NanoPlot → Visualize statistics (HTML + TXT outputs)
-4. Save results in an organized output directory → Store all outputs in results/ folder (HTML, CSV and PNG outputs)
+4. Save results in an organized output directory → Store all outputs in results/ folder (HTML and CSV outputs)
 
 ### Pipeline Workflow
 ```
@@ -46,7 +46,7 @@ longread_pipeline/
         ├── WeightedHistogramReadlength.html
         ├── WeightedLogTransformed_HistogramReadlength.html
         ├── Yield_By_Length.html
-        └── NanoPlot_YYYYMMDD_HHMM.log
+        └── NanoPlot log file
 ```
 ## Required Folders 
 - `data/` → Place your FASTQ files here.  
@@ -60,37 +60,45 @@ Make sure the following tools are installed:
 
 ## Installation
 1. Clone the repository
+   ```
    git clone https://github.com/aleynanur5/longread_pipeline.git
-   ```cd longread_pipeline```
-2. Install the Conda environment
-   ```conda env create -f environment.yml```
-   ```conda activate longread_env```
-3. Initialize Git LFS (for large files)
-    ```git lfs install```
+   cd longread_pipeline
+   ```
+3. Install the Conda environment
+   ```
+   conda env create -f environment.yml
+   conda activate longread_env
+   ```
+5. Initialize Git LFS (for large files)
+   ```
+   git lfs install
+   ```
 
 ## Running the Pipeline
 Execute the workflow using Snakemake:
-```snakemake --cores 1```
+```
+snakemake --cores 1
+```
 This will execute the full workflow defined in the Snakefile and generate results in the results/ directory.
 
 ## Input Data
 The pipeline expects long-read sequencing data in FASTQ format.
 Example input location:
 data/example.fastq
-Large sequencing files are tracked using Git LFS.
+Large sequencing FASTQ files are tracked using Git LFS.
 
 ## Output
 After running the pipeline, the results will be stored in the results/ directory.
 Outputs include:
 - Read statistics (`.csv`)
 - Quality metrics (`.html` or `.txt`)
-- Visualization plots (`.png` or `.pdf`)
+- Visualization plots (`.html` inside NanoPlot_details/)
 
 ## Reproducibility
 The pipeline uses:
 - Snakemake for workflow management
 - Conda environment for dependency management
-- Git LFS for handling large sequencing files
+- Git LFS for handling large sequencing FASTQ files
 
 This project uses a Conda environment defined by an environment.yml file to provide reproducible analysis.
 To recreate the environment:
