@@ -1,0 +1,332 @@
+2026-03-11 13:47:08,540 NanoPlot 1.46.2 started with arguments Namespace(threads=1, verbose=False, store=False, raw=False, huge=False, outdir='results/NanoPlot_details', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=False, title=None, font_scale=1, dpi=300, hide_stats=False, fastq=['data/barcode77.fastq'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='results/NanoPlot_details/')
+2026-03-11 13:47:08,541 Python version is: 3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:42:22) [GCC 14.3.0]
+2026-03-11 13:47:08,610 Nanoget: Starting to collect statistics from plain fastq file.
+2026-03-11 13:47:15,979 Reduced DataFrame memory usage from 1.2362518310546875Mb to 1.2362518310546875Mb
+2026-03-11 13:47:16,012 Nanoget: Gathered all metrics of 81011 reads
+2026-03-11 13:47:16,082 Calculated statistics
+2026-03-11 13:47:16,083 Using sequenced read lengths for plotting.
+2026-03-11 13:47:16,122 NanoPlot:  Valid color #4CB391.
+2026-03-11 13:47:16,123 NanoPlot:  Valid colormap Greens.
+2026-03-11 13:47:16,126 NanoPlot:  Creating length plots for Read length.
+2026-03-11 13:47:16,126 NanoPlot:  Using 81011 reads maximum of 686155bp.
+2026-03-11 13:47:16,327 Chromium init'ed with kwargs {}
+2026-03-11 13:47:16,328 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:16,330 Temp directory created: /tmp/tmp274e36e_.
+2026-03-11 13:47:16,330 Opening browser.
+2026-03-11 13:47:16,332 Temp directory created: /tmp/tmpweux45j7.
+2026-03-11 13:47:16,414 Temporary directory at: /tmp/tmpweux45j7
+2026-03-11 13:47:16,485 Closing browser.
+2026-03-11 13:47:16,502 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,502 shutil.rmtree worked.
+2026-03-11 13:47:16,503 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,503 shutil.rmtree worked.
+2026-03-11 13:47:16,503 Cancelling tasks.
+2026-03-11 13:47:16,503 Exiting Kaleido/Choreo
+2026-03-11 13:47:16,504 DPI helper failed for results/NanoPlot_details/WeightedHistogramReadlength.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:16,508 Chromium init'ed with kwargs {}
+2026-03-11 13:47:16,509 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:16,510 Temp directory created: /tmp/tmppewed1oc.
+2026-03-11 13:47:16,510 Opening browser.
+2026-03-11 13:47:16,512 Temp directory created: /tmp/tmpfb4xjmsd.
+2026-03-11 13:47:16,534 Temporary directory at: /tmp/tmpfb4xjmsd
+2026-03-11 13:47:16,596 Closing browser.
+2026-03-11 13:47:16,613 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,613 shutil.rmtree worked.
+2026-03-11 13:47:16,614 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,614 shutil.rmtree worked.
+2026-03-11 13:47:16,614 Cancelling tasks.
+2026-03-11 13:47:16,614 Exiting Kaleido/Choreo
+2026-03-11 13:47:16,614 No static plots are saved due to an export problem:
+2026-03-11 13:47:16,615 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:16,691 Chromium init'ed with kwargs {}
+2026-03-11 13:47:16,692 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:16,693 Temp directory created: /tmp/tmpnugtki5d.
+2026-03-11 13:47:16,694 Opening browser.
+2026-03-11 13:47:16,708 Temp directory created: /tmp/tmpd29p7ail.
+2026-03-11 13:47:16,730 Temporary directory at: /tmp/tmpd29p7ail
+2026-03-11 13:47:16,783 Closing browser.
+2026-03-11 13:47:16,793 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,793 shutil.rmtree worked.
+2026-03-11 13:47:16,793 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,794 shutil.rmtree worked.
+2026-03-11 13:47:16,794 Cancelling tasks.
+2026-03-11 13:47:16,794 Exiting Kaleido/Choreo
+2026-03-11 13:47:16,794 DPI helper failed for results/NanoPlot_details/WeightedLogTransformed_HistogramReadlength.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:16,801 Chromium init'ed with kwargs {}
+2026-03-11 13:47:16,801 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:16,802 Temp directory created: /tmp/tmplo2enkci.
+2026-03-11 13:47:16,802 Opening browser.
+2026-03-11 13:47:16,805 Temp directory created: /tmp/tmpbx6sfs3q.
+2026-03-11 13:47:16,826 Temporary directory at: /tmp/tmpbx6sfs3q
+2026-03-11 13:47:16,828 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,829 shutil.rmtree worked.
+2026-03-11 13:47:16,829 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,829 shutil.rmtree worked.
+2026-03-11 13:47:16,829 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,829 shutil.rmtree worked.
+2026-03-11 13:47:16,878 Closing browser.
+2026-03-11 13:47:16,895 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,896 shutil.rmtree worked.
+2026-03-11 13:47:16,896 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:16,896 shutil.rmtree worked.
+2026-03-11 13:47:16,896 Cancelling tasks.
+2026-03-11 13:47:16,896 Exiting Kaleido/Choreo
+2026-03-11 13:47:16,897 No static plots are saved due to an export problem:
+2026-03-11 13:47:16,897 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:16,945 Chromium init'ed with kwargs {}
+2026-03-11 13:47:16,945 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:16,946 Temp directory created: /tmp/tmph9s148nh.
+2026-03-11 13:47:16,947 Opening browser.
+2026-03-11 13:47:16,948 Temp directory created: /tmp/tmprm10xln7.
+2026-03-11 13:47:16,969 Temporary directory at: /tmp/tmprm10xln7
+2026-03-11 13:47:17,029 Closing browser.
+2026-03-11 13:47:17,046 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,047 shutil.rmtree worked.
+2026-03-11 13:47:17,048 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,048 shutil.rmtree worked.
+2026-03-11 13:47:17,048 Cancelling tasks.
+2026-03-11 13:47:17,048 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,049 DPI helper failed for results/NanoPlot_details/Non_weightedHistogramReadlength.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:17,051 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,052 shutil.rmtree worked.
+2026-03-11 13:47:17,054 Chromium init'ed with kwargs {}
+2026-03-11 13:47:17,055 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:17,056 Temp directory created: /tmp/tmpmghccp9e.
+2026-03-11 13:47:17,057 Opening browser.
+2026-03-11 13:47:17,059 Temp directory created: /tmp/tmpua2ikm04.
+2026-03-11 13:47:17,082 Temporary directory at: /tmp/tmpua2ikm04
+2026-03-11 13:47:17,147 Closing browser.
+2026-03-11 13:47:17,165 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,165 shutil.rmtree worked.
+2026-03-11 13:47:17,166 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,166 shutil.rmtree worked.
+2026-03-11 13:47:17,166 Cancelling tasks.
+2026-03-11 13:47:17,166 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,167 No static plots are saved due to an export problem:
+2026-03-11 13:47:17,167 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:17,186 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,186 shutil.rmtree worked.
+2026-03-11 13:47:17,238 Chromium init'ed with kwargs {}
+2026-03-11 13:47:17,238 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:17,239 Temp directory created: /tmp/tmpefsowx38.
+2026-03-11 13:47:17,240 Opening browser.
+2026-03-11 13:47:17,241 Temp directory created: /tmp/tmpiacabyh3.
+2026-03-11 13:47:17,263 Temporary directory at: /tmp/tmpiacabyh3
+2026-03-11 13:47:17,316 Closing browser.
+2026-03-11 13:47:17,333 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,333 shutil.rmtree worked.
+2026-03-11 13:47:17,334 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,334 shutil.rmtree worked.
+2026-03-11 13:47:17,334 Cancelling tasks.
+2026-03-11 13:47:17,334 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,335 DPI helper failed for results/NanoPlot_details/Non_weightedLogTransformed_HistogramReadlength.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:17,341 Chromium init'ed with kwargs {}
+2026-03-11 13:47:17,342 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:17,343 Temp directory created: /tmp/tmpvoskn6ck.
+2026-03-11 13:47:17,343 Opening browser.
+2026-03-11 13:47:17,345 Temp directory created: /tmp/tmpb2mp7opa.
+2026-03-11 13:47:17,369 Temporary directory at: /tmp/tmpb2mp7opa
+2026-03-11 13:47:17,439 Closing browser.
+2026-03-11 13:47:17,456 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,456 shutil.rmtree worked.
+2026-03-11 13:47:17,457 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,457 shutil.rmtree worked.
+2026-03-11 13:47:17,457 Cancelling tasks.
+2026-03-11 13:47:17,457 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,457 No static plots are saved due to an export problem:
+2026-03-11 13:47:17,457 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:17,457 NanoPlot: Creating yield by minimal length plot for Read length.
+2026-03-11 13:47:17,526 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,526 shutil.rmtree worked.
+2026-03-11 13:47:17,526 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,526 shutil.rmtree worked.
+2026-03-11 13:47:17,748 Chromium init'ed with kwargs {}
+2026-03-11 13:47:17,748 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:17,750 Temp directory created: /tmp/tmp8bqkhyqr.
+2026-03-11 13:47:17,750 Opening browser.
+2026-03-11 13:47:17,752 Temp directory created: /tmp/tmpcmbzvbxv.
+2026-03-11 13:47:17,777 Temporary directory at: /tmp/tmpcmbzvbxv
+2026-03-11 13:47:17,837 Closing browser.
+2026-03-11 13:47:17,854 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,854 shutil.rmtree worked.
+2026-03-11 13:47:17,855 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,855 shutil.rmtree worked.
+2026-03-11 13:47:17,855 Cancelling tasks.
+2026-03-11 13:47:17,855 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,855 DPI helper failed for results/NanoPlot_details/Yield_By_Length.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:17,860 Chromium init'ed with kwargs {}
+2026-03-11 13:47:17,860 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:17,861 Temp directory created: /tmp/tmpjby6epld.
+2026-03-11 13:47:17,861 Opening browser.
+2026-03-11 13:47:17,863 Temp directory created: /tmp/tmp3q2cuimk.
+2026-03-11 13:47:17,886 Temporary directory at: /tmp/tmp3q2cuimk
+2026-03-11 13:47:17,943 Closing browser.
+2026-03-11 13:47:17,961 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,961 shutil.rmtree worked.
+2026-03-11 13:47:17,962 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:17,962 shutil.rmtree worked.
+2026-03-11 13:47:17,962 Cancelling tasks.
+2026-03-11 13:47:17,962 Exiting Kaleido/Choreo
+2026-03-11 13:47:17,962 No static plots are saved due to an export problem:
+2026-03-11 13:47:17,962 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:17,963 Created length plots
+2026-03-11 13:47:17,966 NanoPlot: Creating Read lengths vs Average read quality plots using 81011 reads.
+2026-03-11 13:47:18,085 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,085 shutil.rmtree worked.
+2026-03-11 13:47:18,085 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,085 shutil.rmtree worked.
+2026-03-11 13:47:18,136 Chromium init'ed with kwargs {}
+2026-03-11 13:47:18,136 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:18,138 Temp directory created: /tmp/tmpg6kb4tey.
+2026-03-11 13:47:18,138 Opening browser.
+2026-03-11 13:47:18,139 Temp directory created: /tmp/tmp10i4r3zd.
+2026-03-11 13:47:18,162 Temporary directory at: /tmp/tmp10i4r3zd
+2026-03-11 13:47:18,227 Closing browser.
+2026-03-11 13:47:18,244 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,244 shutil.rmtree worked.
+2026-03-11 13:47:18,244 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,245 shutil.rmtree worked.
+2026-03-11 13:47:18,245 Cancelling tasks.
+2026-03-11 13:47:18,245 Exiting Kaleido/Choreo
+2026-03-11 13:47:18,245 DPI helper failed for results/NanoPlot_details/LengthvsQualityScatterPlot_dot.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:18,250 Chromium init'ed with kwargs {}
+2026-03-11 13:47:18,251 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:18,252 Temp directory created: /tmp/tmpvt9z2_jw.
+2026-03-11 13:47:18,252 Opening browser.
+2026-03-11 13:47:18,254 Temp directory created: /tmp/tmpqk8coypz.
+2026-03-11 13:47:18,274 Temporary directory at: /tmp/tmpqk8coypz
+2026-03-11 13:47:18,330 Closing browser.
+2026-03-11 13:47:18,347 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,347 shutil.rmtree worked.
+2026-03-11 13:47:18,347 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,348 shutil.rmtree worked.
+2026-03-11 13:47:18,348 Cancelling tasks.
+2026-03-11 13:47:18,348 Exiting Kaleido/Choreo
+2026-03-11 13:47:18,348 No static plots are saved due to an export problem:
+2026-03-11 13:47:18,348 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:18,422 Chromium init'ed with kwargs {}
+2026-03-11 13:47:18,422 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:18,423 Temp directory created: /tmp/tmpppxtp4m3.
+2026-03-11 13:47:18,424 Opening browser.
+2026-03-11 13:47:18,426 Temp directory created: /tmp/tmpk33zeogh.
+2026-03-11 13:47:18,449 Temporary directory at: /tmp/tmpk33zeogh
+2026-03-11 13:47:18,505 Closing browser.
+2026-03-11 13:47:18,522 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,522 shutil.rmtree worked.
+2026-03-11 13:47:18,522 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,522 shutil.rmtree worked.
+2026-03-11 13:47:18,522 Cancelling tasks.
+2026-03-11 13:47:18,522 Exiting Kaleido/Choreo
+2026-03-11 13:47:18,523 DPI helper failed for results/NanoPlot_details/LengthvsQualityScatterPlot_kde.png: It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.; falling back to explicit px size
+2026-03-11 13:47:18,530 Chromium init'ed with kwargs {}
+2026-03-11 13:47:18,530 Found chromium path: /home/lenova/miniconda3/envs/longread_env/lib/python3.10/site-packages/choreographer/cli/browser_exe/chrome-linux64/chrome
+2026-03-11 13:47:18,531 Temp directory created: /tmp/tmp_t46o09g.
+2026-03-11 13:47:18,532 Opening browser.
+2026-03-11 13:47:18,533 Temp directory created: /tmp/tmp7l8yejqb.
+2026-03-11 13:47:18,556 Temporary directory at: /tmp/tmp7l8yejqb
+2026-03-11 13:47:18,613 Closing browser.
+2026-03-11 13:47:18,630 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,631 shutil.rmtree worked.
+2026-03-11 13:47:18,631 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,631 shutil.rmtree worked.
+2026-03-11 13:47:18,632 Cancelling tasks.
+2026-03-11 13:47:18,632 Exiting Kaleido/Choreo
+2026-03-11 13:47:18,632 No static plots are saved due to an export problem:
+2026-03-11 13:47:18,632 It seems like you are running a slim version of your operating system and are missing some common dependencies. The following command should install the required dependencies on most systems:
+
+$ sudo apt update && sudo apt-get install libnss3 libatk-bridge2.0-0 libcups2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libpango-1.0-0 libcairo2 libasound2
+
+If you have already run the above command and are still seeing this error, or the above command fails, consult the Kaleido documentation for operating system to install chromium dependencies.
+
+For support, run the command `choreo_diagnose` and create an issue with its output.
+2026-03-11 13:47:18,632 Created LengthvsQual plot
+2026-03-11 13:47:18,632 Writing html report.
+2026-03-11 13:47:18,673 Finished!
+2026-03-11 13:47:18,732 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,733 shutil.rmtree worked.
+2026-03-11 13:47:18,733 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,733 shutil.rmtree worked.
+2026-03-11 13:47:18,733 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,733 shutil.rmtree worked.
+2026-03-11 13:47:18,733 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,733 shutil.rmtree worked.
+2026-03-11 13:47:18,733 TemporaryDirectory.cleanup() worked.
+2026-03-11 13:47:18,733 shutil.rmtree worked.
