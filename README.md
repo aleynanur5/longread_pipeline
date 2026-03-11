@@ -8,7 +8,7 @@ This pipeline performs basic analysis of long-read sequencing data and generates
 1. Read input FASTQ sequencing data
 2. Analyze read statistics (analyze_reads) → Compute read statistics (CSV)
 3. Generate plots and QC reports using NanoPlot → Visualize statistics (HTML + TXT outputs)
-4. Save results in an organized output directory → Store all outputs in results/ folder (HTML, ZIP, CSV and PNG outputs)
+4. Save results in an organized output directory → Store all outputs in results/ folder (HTML, CSV and PNG outputs)
 
 ### Pipeline Workflow
 ```
@@ -16,9 +16,7 @@ Raw Sequencing Data (FASTQ)
 ↓
 Read Analysis (analyze_reads.py)
 ↓
-Quality Metrics & Statistics (FastQC + NanoPlot)   
-↓
-Plot Generation (plot_reads.py or NanoPlot)
+Quality Metrics & Statistics (NanoPlot)   
 ↓
 Results Folder
 ```
@@ -36,14 +34,19 @@ longread_pipeline/
 │   ├── example.zip                   # Example data (if needed)
 │   └── example.fastq                 # Example FASTQ file
 ├── environment.yml                   # Conda environment file for reproducibility
-├── plot_reads.py                     # Script for generating plots
 └── results/
-    ├── example_fastqc.html           # FastQC report
-    ├── example_fastqc.zip            # FastQC result files
+    ├── NanoPlot-report.html          # NanoPlot quality report
+    ├── NanoStats.txt                 # NanoPlot statistics
     ├── example_stats.csv             # Read statistics
-    ├── gc_distribution.png           # GC content distribution plot
-    ├── mean_quality_distribution.png # Mean quality distribution plot
-    └── read_length_distribution.png  # Read length distribution plot
+    └── NanoPlot_details/             # All detailed plots
+        ├── LengthvsQualityScatterPlot_dot.html
+        ├── LengthvsQualityScatterPlot_kde.html
+        ├── Non_weightedHistogramReadlength.html
+        ├── Non_weightedLogTransformed_HistogramReadlength.html
+        ├── WeightedHistogramReadlength.html
+        ├── WeightedLogTransformed_HistogramReadlength.html
+        ├── Yield_By_Length.html
+        └── NanoPlot_YYYYMMDD_HHMM.log
 ```
 ## Required Folders 
 - `data/` → Place your FASTQ files here.  
