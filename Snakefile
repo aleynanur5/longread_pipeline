@@ -26,6 +26,7 @@ rule nanoplot:
         NanoPlot -t 1 --fastq {input} -o {output.detail_dir} --plots kde dot
         mv {output.detail_dir}/NanoPlot-report.html {output.html}
         mv {output.detail_dir}/NanoStats.txt {output.stats}
+       
         """
 
 rule calculate_metrics:
@@ -34,7 +35,7 @@ rule calculate_metrics:
     output:
         "results/Metrics/read_metrics.csv"
     shell:
-        "python calculate_metrics.py {input}"
+        "python calculate_metrics.py {input} {output}"
 
 rule visualize_metrics:
     input:

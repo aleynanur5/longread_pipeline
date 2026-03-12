@@ -3,10 +3,10 @@ from Bio import SeqIO
 import os
 import sys
 
-input_fastq = sys.argv[1] if len(sys.argv) > 1 else "data/barcode77.fastq"
-out_dir = "results/Metrics"
-os.makedirs(out_dir, exist_ok=True)
-output_file = os.path.join(out_dir, "read_metrics.csv")
+input_fastq = sys.argv[1]
+output_file = sys.argv[2]
+
+os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
 def calc_gc(seq):
     g = seq.count("G")
