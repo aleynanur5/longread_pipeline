@@ -29,5 +29,23 @@ for record in SeqIO.parse(input_fastq, "fastq"):
     })
 
 df = pd.DataFrame(data)
-df.to_csv(output_file, index=False)
-print(f"✅ Metrics saved to {output_file}")
+
+summary = pd.DataFrame({
+    "Read_ID": ["ALL"],
+    "Length": [df['Length'].mean()],
+    "GC%": [df['GC%'].mean()],
+    "Mean_Quality": [df['Mean_Quality'].mean()],
+    "Mean_Quality": [df['Mean_Quality'].mean()],
+    "Length_Min": [df['Length'].min()],
+    "Length_Max": [df['Length'].max()],
+    "Length_Median": [df['Length'].median()],
+    "GC_Min": [df['GC%'].min()],
+    "GC_Max": [df['GC%'].max()],
+    "GC_Median": [df['GC%'].median()]
+})
+
+df_summary = pd.concat([df, summary], ignore_index=True)
+
+
+df_summary.to_csv(output_file, index=False)
+print(f"✅ Metrics + summary saved to {output_file}")

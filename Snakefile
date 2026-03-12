@@ -17,7 +17,7 @@ rule nanoplot:
     input:
         "data/barcode77.fastq"
     output:
-        html="results/NanoPlot-report.html",
+        html="results/NanoPlot-report.html", 
         stats="results/NanoStats.txt",
         detail_dir=directory("results/NanoPlot_details")
     shell:

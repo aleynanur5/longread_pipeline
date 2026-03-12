@@ -10,6 +10,8 @@ os.makedirs(out_dir, exist_ok=True)
 
 df = pd.read_csv(stats_file)
 
+df = df[df['Read_ID'] != 'ALL']
+
 metrics = {
     "Length": "Read Length (bp)",
     "Mean_Quality": "Mean Quality",
