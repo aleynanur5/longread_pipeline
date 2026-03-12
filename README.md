@@ -19,6 +19,8 @@ Quality Metrics & Statistics (NanoPlot)
 ↓
 Additional Metrics (calculate_metrics.py)
 ↓
+Custom Visualizations (visualize_reads.py)
+↓
 Results Folder
 ```
 
@@ -91,7 +93,7 @@ Make sure the following tools are installed:
 ## Running the Pipeline
 Execute the workflow using Snakemake:
 ```
-snakemake --cores 1
+snakemake --cores 2
 ```
 This will execute the full workflow defined in the Snakefile and generate results in the results/ directory.
 
@@ -104,9 +106,9 @@ Large sequencing FASTQ files are tracked using Git LFS.
 ## Output
 After running the pipeline, the results will be stored in the results/ directory.
 Outputs include:
-- Quality metrics (`.html` or `.txt`)
-- Additional Metrics (`.csv`)
-- Visualization plots (`.png`)
+- Quality metrics (`.html` or `.txt`) → NanoPlot
+- Additional metrics (`.csv`) → calculate_metrics.py
+- Custom visualization plots (`.png`) → visualize_reads.py
 
 ## Reproducibility
 The pipeline uses:
