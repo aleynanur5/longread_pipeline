@@ -6,17 +6,18 @@ This pipeline performs basic analysis of long-read sequencing data and generates
 
 ### Main steps of the pipeline:
 1. Read input FASTQ sequencing data
-2. Analyze read statistics (analyze_reads) → Compute read statistics (CSV)
-3. Generate plots and QC reports using NanoPlot → Visualize statistics (HTML + TXT outputs)
-4. Save results in an organized output directory → Store all outputs in results/ folder (HTML and CSV outputs)
+2. Generate Quality Metrics & Statistics using NanoPlot → Produces HTML and TXT outputs
+3. Calculate Additional Metrics using calculate_metrics.py → Produces CSV outputs 
+4. Generate Custom Visualizations using visualize_reads.py → PNG plots 
+5. Save all results in organized output directories → Store all outputs in results/ 
 
 ### Pipeline Workflow
 ```
 Raw Sequencing Data (FASTQ)
 ↓
-Read Analysis (analyze_reads.py)
+Quality Metrics & Statistics (NanoPlot)
 ↓
-Quality Metrics & Statistics (NanoPlot)   
+Additional Metrics (calculate_metrics.py)
 ↓
 Results Folder
 ```
@@ -27,30 +28,39 @@ This workflow analyzes long-read sequencing data and generates statistics and vi
 
 ```
 longread_pipeline/
-├── README.md                         # Project documentation
-├── Snakefile                         # Snakemake workflow definition
-├── analyze_reads.py                  # Script for analyzing sequencing reads
-├── visualize_reads.py
-├── calculate_metrics.py                 
-├── data/
-│   ├── example.zip                   # Example data (if needed)
-│   └── example.fastq                 # Example FASTQ file
-├── environment.yml                   # Conda environment file for reproducibility
-└── results/
-    ├── NanoPlot-report.html          # NanoPlot quality report
-    ├── NanoStats.txt                 # NanoPlot statistics
-    ├── example_stats.csv             # Read statistics
-    ├── Metrics
-    ├──  Visualization      
-    └── NanoPlot_details/             # All detailed plots
-        ├── LengthvsQualityScatterPlot_dot.html
-        ├── LengthvsQualityScatterPlot_kde.html
-        ├── Non_weightedHistogramReadlength.html
-        ├── Non_weightedLogTransformed_HistogramReadlength.html
-        ├── WeightedHistogramReadlength.html
-        ├── WeightedLogTransformed_HistogramReadlength.html
-        ├── Yield_By_Length.html
-        └── NanoPlot log file
+│
+├── README.md
+├── Snakefile
+├── calculate_metrics.py
+├── data
+│   ├── Case Study_ Gıda Güvenliği Krizi_ Bozulmuş Ürün.zip
+│   └── barcode77.fastq
+├── environment.yml
+├── results
+│   ├── Metrics
+│   │   └── read_metrics.csv
+│   ├── NanoPlot-report.html
+│   ├── NanoPlot_details
+│   │   ├── LengthvsQualityScatterPlot_dot.html
+│   │   ├── LengthvsQualityScatterPlot_kde.html
+│   │   ├── NanoPlot_20260312_1104.log
+│   │   ├── Non_weightedHistogramReadlength.html
+│   │   ├── Non_weightedLogTransformed_HistogramReadlength.html
+│   │   ├── WeightedHistogramReadlength.html
+│   │   ├── WeightedLogTransformed_HistogramReadlength.html
+│   │   └── Yield_By_Length.html
+│   ├── NanoStats.txt
+│   └── Visualization
+│       ├── GCp_DotPlot.png
+│       ├── GCp_Histogram.png
+│       ├── GCp_KDE.png
+│       ├── Length_DotPlot.png
+│       ├── Length_Histogram.png
+│       ├── Length_KDE.png
+│       ├── Mean_Quality_DotPlot.png
+│       ├── Mean_Quality_Histogram.png
+│       └── Mean_Quality_KDE.png
+└── visualize_reads.py
 ```
 ## Required Folders 
 - `data/` → Place your FASTQ files here.  
@@ -68,12 +78,12 @@ Make sure the following tools are installed:
    git clone https://github.com/aleynanur5/longread_pipeline.git
    cd longread_pipeline
    ```
-3. Install the Conda environment
+2. Install the Conda environment
    ```
    conda env create -f environment.yml
    conda activate longread_env
    ```
-5. Initialize Git LFS (for large files)
+3. Initialize Git LFS (for large files)
    ```
    git lfs install
    ```
@@ -94,9 +104,9 @@ Large sequencing FASTQ files are tracked using Git LFS.
 ## Output
 After running the pipeline, the results will be stored in the results/ directory.
 Outputs include:
-- Read statistics (`.csv`)
 - Quality metrics (`.html` or `.txt`)
-- Visualization plots (`.html` inside NanoPlot_details/)
+- Additional Metrics (`.csv`)
+- Visualization plots (`.png`)
 
 ## Reproducibility
 The pipeline uses:
