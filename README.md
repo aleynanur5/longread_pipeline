@@ -45,7 +45,7 @@ longread_pipeline/
 │   ├── NanoPlot_details
 │   │   ├── LengthvsQualityScatterPlot_dot.html
 │   │   ├── LengthvsQualityScatterPlot_kde.html
-│   │   ├── NanoPlot_20260312_1104.log
+│   │   ├── NanoPlot_20260312_1743.log
 │   │   ├── Non_weightedHistogramReadlength.html
 │   │   ├── Non_weightedLogTransformed_HistogramReadlength.html
 │   │   ├── WeightedHistogramReadlength.html
@@ -53,13 +53,11 @@ longread_pipeline/
 │   │   └── Yield_By_Length.html
 │   ├── NanoStats.txt
 │   └── Visualization
-│       ├── GCp_DotPlot.png
 │       ├── GCp_Histogram.png
 │       ├── GCp_KDE.png
-│       ├── Length_DotPlot.png
 │       ├── Length_Histogram.png
 │       ├── Length_KDE.png
-│       ├── Mean_Quality_DotPlot.png
+│       ├── Length_LogHistogram.png
 │       ├── Mean_Quality_Histogram.png
 │       └── Mean_Quality_KDE.png
 └── visualize_reads.py
