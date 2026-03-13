@@ -36,7 +36,7 @@ for metric, label in metrics.items():
 
 
     filename_safe = metric.replace("%", "p")
-    
+
     plt.figure(figsize=(10,6))
     plt.hist(df[metric], bins=50, color="skyblue", edgecolor="black")
     plt.title(f"{label} Distribution (Histogram)")
@@ -55,13 +55,15 @@ for metric, label in metrics.items():
     plt.savefig(os.path.join(out_dir, f"{filename_safe}_KDE.png"))
     plt.close()
 
+if "Length" in df.columns:
+    import numpy as np
     plt.figure(figsize=(10,6))
-    plt.scatter(range(len(df)), df[metric], s=5, alpha=0.6)
-    plt.title(f"{label} Values (Dot Plot)")
-    plt.xlabel("Read Index")
-    plt.ylabel(label)
+    plt.hist(np.log10(df["Length"] + 1), bins=50, color="purple", edgecolor="black")
+    plt.title("Log Read Length Distribution")
+    plt.xlabel("log10(Read Length)")
+    plt.ylabel("Count")
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, f"{filename_safe}_DotPlot.png"))
+    plt.savefig(os.path.join(out_dir, "Length_LogHistogram.png"))
     plt.close()
 
-print(f"\n✅ All plots saved in {out_dir}/: Histogram, KDE, Dot Plot for each metric")
+print(f"\n✅ All plots saved in {out_dir}/: Histogram, KD, Log Read Length Distribution for each metric")
